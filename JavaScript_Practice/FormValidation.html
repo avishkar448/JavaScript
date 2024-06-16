@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="f1">
+        Username:
+        <input type="text" id="nm">
+        <br>
+        <span id="nmtxt"></span><br><br>
+
+        Email:
+        <input type="email" id="em"><br>
+        <span id="emtxt"></span><br><br>
+
+        Phone no:
+        <input type="text" id="ph"><br>
+        <span id="phtxt"></span><br><br>
+
+        <input type="button" onclick="Valid()" value="submit">
+        <script>
+            function Valid(){ 
+                //name
+                let uname=document.getElementById("nm").value;
+
+                if(uname.length==0){
+                    document.getElementById("nmtxt").innerHTML="Usename should not be empty"
+                }
+
+                //Email
+
+                let email1=document.getElementById("em").value;
+                const pattern=/^[a-z A-Z 0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+                if(email1.length==0){
+                    document.getElementById("emtxt").innerHTML="email should not be empty"
+                }
+                else if(pattern.test(email1)==false){
+                    document.getElementById("emtxt").innerHTML="enter the valid email address"
+
+                }
+
+                //phone number
+                let phone=document.getElementById("ph").value;
+                const pattern1=/^[0-9]{10}$/
+
+                if(phone.length==0){
+                    document.getElementById("phtxt").innerHTML="Phone number should not be empty"
+                }
+                else if(pattern1.test(phone)==false){
+                    document.getElementById("phtxt").innerHTML="enter the valid phone number"
+                }
+                
+
+            }
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <hr>
+    <p id="demo1"></p>
+    <script>
+        //let q=document.getElementById("demo");
+        
+        const n=[12,43,54,66,78,54,32,45];
+        let txt="";
+        for(let i in n){ 
+            txt+=n[i] +"<br>";
+        }
+        document.getElementById("demo").innerHTML=txt;
+    </script>
+
+    <script>
+        const p=[12,24,36,48,60,72]
+        let text="";
+        for(let i of p){
+            text+=i +"<br>";
+        }
+        document.getElementById("demo1").innerHTML=text;
+    </script>
+
+    <script>
+        let x=prompt("Enter the number");
+        let a=Number(x)
+        let result=(x>40)?"You are pass":"You are fail"
+        document.write(result)
+    </script>
+</body>
+</html>

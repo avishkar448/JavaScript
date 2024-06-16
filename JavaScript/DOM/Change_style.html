@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="p1">Hello World</p>
+
+    <script>
+        document.getElementById("p1").style.color="red"
+    </script> -->
+<!-- 
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+
+    <script>
+        const menu=document.querySelector('li');
+        li.textContent="Product";
+        menu.appendChild(li);
+
+        li=document.createElement('li');
+        li.textContent='About';
+        menu.appendChild(li);
+    </script> -->
+
+    <button onclick="myfunction()">Remove</button>
+    <ul id="myfirst">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+    <script>
+        function myfunction(){
+            const list=document.getElementById("myfirst");
+            list.removeChild(list.firstElementChild)
+        }
+    </script>
+</body>
+</html>

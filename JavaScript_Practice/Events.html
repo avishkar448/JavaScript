@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    <p onmouseover="x()">My name is avishkar</p>
+    <script>
+        const x=()=>{
+            alert("This is mouseover")
+        }
+    </script> -->
+
+    <!-- <div id="demo" onmouseup="x()" style="height: 200px; width: 200px; background-color: green;" ></div>
+    <script>
+        const x=()=>{ 
+            document.getElementById("demo").style.backgroundColor="orange"
+        }
+    </script> -->
+
+    <!-- <input type="button" value="click" id="demo">
+    <h3 id="txt"></h3>
+    <script>
+        let demo=document.getElementById("demo")
+        demo.addEventListener("click",myfun)
+        function myfun(){
+            document.getElementById("txt").innerHTML="ware ware wa PAIN"
+        }
+    </script> -->
+
+    <!-- <button id="btn">click</button>
+    <p id="msg"></p>
+    <script>
+        let btn=document.querySelector('#btn')
+        let msg=document.querySelector('#msg')
+
+        btn.addEventListener("mousedown",(e)=>{ 
+                switch(e.button){
+                case 0:
+                    msg.textContent="left mouse button";
+                    break;
+                case 1:
+                    msg.textContent="middle mouse button"
+                    break;
+                case 2:
+                    msg.textContent="right mouse button"
+                    break;
+                default:
+                    msg.textContent="Unknowm"
+                }
+    }) 
+</script>
+-->
+
+<!-- Form Event -->
+<!-- <p>Write something in the input box and then click else where in document body</p>
+
+    <input onblur="alert(this.value)">
+
+    <script>
+        function myfunction(){
+            alert("This is onblur event")
+        }
+    </script> -->
+
+    <div id="demo" style="width: 500px; height: 500px; border: 2px solid black;">
+        <h2>Write here to change color</h2>
+        <input type="text" id="bg" onkeyup="changeBackground()" style="color: black; margin-left: 20px;">
+    </div>
+
+    <script>
+        var a=0
+        var b=0
+        var c=0
+
+        function changeBackground(){ 
+            var x=document.getElementById("demo");
+            x.style.backgroundColor='rgb('+a+','+b+','+c+')'
+
+            a+=80
+            b+=a+60
+            c+=b+80
+
+            if(a>250)a=a-b;
+            if(b>255)b=a-c
+            if(c>255)c=b
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="demo"></p>
+    <script>
+        const a={ 
+            name:"Avishkar",
+            age:21,
+            info:function(){
+                return this.name+" "+this.age;
+            }
+        };
+
+        const b={
+            name:"Abhay",
+            age:17
+        }
+        let q=a.info.bind(b);
+        document.getElementById("demo").innerHTML=q();
+        
+
+    </script> -->
+
+    <!-- call and apply method -->
+    <p id="demo"></p>
+    <script>
+        const person={ 
+            fullinfo:function(city,country){
+            return this.name+"<br>"+this.nm+"<br>"+city+"<br>"+country;
+            }
+        }
+
+        let x={ 
+            name:"Avishkar",
+            nm:7854525215
+        }
+
+        // document.getElementById("demo").innerHTML=person.fullinfo.apply(x,["pune","India"])
+        document.getElementById("demo").innerHTML=person.fullinfo.call(x,"pune","India")
+    </script>
+</body>
+</html>

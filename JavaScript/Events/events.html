@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #track{
+        background-color: orange;
+        height: 100px;
+        width: 100px;
+    }
+</style>
+<body>
+    <!-- mouse ,window ,form , keyboard -->
+
+    <!-- <button onclick="myfunction()">Click me</button>
+    <script>
+        function myfunction(){
+            document.write("This is on click event")
+        }
+    </script> -->
+
+    <!-- Mouseover -->
+    <!-- <p onmouseover="mouseover()">keep mouse </p>
+
+    <script>
+        function mouseover(){ 
+            alert("This is mouseover event")
+        }
+    </script> -->
+<!-- 
+    <div id="hover" onmouseout="out()" style="background-color: aqua; height: 100px; width: 100px;"></div>
+
+    <script>
+        function out(){ 
+            var e=document.getElementById("hover");
+            e.style.display='none';
+        }
+    </script> -->
+
+<!-- 
+    <p>move your mouse to see it's location</p>
+
+    <div id="track"></div>
+    <p id="log"></p>
+
+    <script>
+        let track=document.querySelector("#track")
+        track.addEventListener('mousemove',(e)=>{
+            let log=document.querySelector('#log')
+            log.innerText=`${e.screenX},${e.screenY}
+            screen x/y:(${e.clientX},${e.clientY})`
+        })
+    </script> -->
+
+    
+
+
+
+
+
+    <button id="btn">click with any mouse left,right,middle</button>
+    <p id="msg"></p>
+    <script>
+        let btn=document.querySelector('#btn');
+        let msg=document.querySelector('#msg')
+
+        // btn.addEventListener('contextmenu',(e)=>{
+        //     e.preventDefault();
+        // })
+        btn.addEventListener('mousedown',(e)=>{
+            switch(e.button){
+                case 0:
+                    msg.textContent="left mouse button";
+                    break;
+                case 1:
+                    msg.textContent="middle mouse button"
+                    break;
+                case 2:
+                    msg.textContent="right mouse button"
+                    break;
+                default:
+                    msg.textContent="Unknowm"
+            }
+        })
+    </script>
+</body>
+</html>

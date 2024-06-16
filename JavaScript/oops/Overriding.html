@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function alert(){ 
+           // console.log("This is overriding function")
+           document.write("This is overriding function")
+        };
+        alert()
+
+    </script> -->
+
+    
+    <!-- <script>
+        //function override
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+        
+        function sum(a, b) {
+            return a + b;
+        }
+        console.log(sum(5,10,5))
+    </script> -->
+
+    <script>
+        class Calculation{ 
+            calc(){
+                document.write("Let's start")
+            }
+        }
+        class Square extends Calculation{ 
+            calc(x){ 
+                super.calc();
+                document.write(x*x) 
+            }
+        }
+        var sq=new Square();
+        sq.calc(6)
+    </script>
+</body>
+
+</html>

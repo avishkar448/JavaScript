@@ -1,0 +1,3 @@
+<h1>Ajax is easy to learn......!</h1>
+<p>Ajax is not programming language</p>
+<p>Ajax stands for Asynchronous js and xml</p>

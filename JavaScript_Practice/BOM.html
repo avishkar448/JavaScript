@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="clock"></h2>
+    <!-- <button onclick="back()" >back</button> -->
+    <script>
+        // document.write("Url: ",window.location.hostname)
+
+        // const back=function(){ 
+        //     document.write("History: ",window.history.back())
+        // }
+
+        // document.write("Language: ",navigator.language,"<br>")
+        // document.write("Language: ",navigator.platform,"<br>")
+        // document.write("Language: ",navigator.onLine,"<br>")
+        // document.write("Language: ",navigator.javaEnabled,"<br>")
+        // document.write("Language: ",navigator.cookieEnabled,"<br>")
+    
+        // const a=()=>{ 
+        //     document.write("My name is Avishkar")
+        // }
+
+        // setTimeout(a,3000)
+
+        setInterval(avi,1000)
+        function avi(){ 
+            const d=new Date();
+
+            document.getElementById("clock").innerHTML=d.toLocaleTimeString()
+        }
+        
+        
+    </script>
+</body>
+</html>

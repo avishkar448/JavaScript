@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="demo"></ul><br><br>
+
+    Enter the name:
+    <input type="text" id="nm"><br>
+    <button id="addbtn" onclick="additem()">add</button>
+    <button id="rmbtn" onclick="removeitem()">remove</button>
+    <br>
+    <input type="text" id="rep"><br>
+    <button id="repbtn" onclick="replaceitem()">replace</button><br>
+
+
+    <hr>
+    <br><br>
+    <abbr title="naruto" id="x">
+        <img src="na.jpg" alt="naruto" id="myimg" onclick="change()" style="height: 200px; width: 200px;">
+    </abbr>
+
+    <script>
+        const additem=()=>{
+            var a=document.getElementById("demo");
+            var txt=document.getElementById("nm");
+            var list=document.createElement("li")
+           // list.setAttribute("id",nm.value)
+            list.appendChild(document.createTextNode(txt.value))
+            a.appendChild(list)
+        }
+
+        const removeitem=()=>{
+            var a=document.getElementById("demo")
+            //var txt=document.getElementById("nm");
+           // var item=document.getElementById(txt.value)
+            a.removeChild(a.lastElementChild)
+        }
+
+        const replaceitem=()=>{ 
+            var a=document.getElementById("demo").children[0];
+            var txt=document.getElementById("rep");
+            var newnode=document.createTextNode(txt.value)
+
+            a.replaceChild(newnode,a.childNodes[0])
+        }
+
+        const change=()=>{ 
+            document.getElementById("myimg").src="sasuke.jpg"
+            document.getElementById("x").setAttribute("title","Sasuke")
+        }
+    </script>
+</body>
+</html>

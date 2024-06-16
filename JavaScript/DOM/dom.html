@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>We are learning DOM</h3>
+    <label for="">Enter value of a: </label>
+    <input type="number" name="" id="v1"><br>
+
+    <label for="">Enter value of b: </label>
+    <input type="number" name="" id="v2"><br>
+
+    <input type="button" value="AddNumber" onclick="add()"><br>
+
+    <p id="result" style="color: green;"></p>
+
+    <script>
+        function add(){ 
+            const num1=document.getElementById("v1").value;
+            const num2=document.getElementById("v2").value;
+
+            const result=Number(num1)+Number(num2)
+
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+
+
+</body>
+</html>

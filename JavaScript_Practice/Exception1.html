@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    number1:
+    <input type="text" id="n1" >
+    number2:
+    <input type="text" id="n2">
+    <input type="button" id="submit" value="Divide" onclick="divide()">
+    <p id="result"></p>
+
+
+    <script> 
+        function divide(){ 
+            let x=document.getElementById("n1").value
+            let y=document.getElementById("n2").value
+
+            let a=Number(x)
+            let b=Number(y)
+
+            
+
+            try{ 
+                if(b==0){
+                  throw("Divide by zero error")  
+                }
+                else{ 
+                   let  div=a/b;
+                   document.getElementById("result").innerHTML="Division is: "+div 
+                }    
+            }
+            catch(error ){
+                document.getElementById("result").innerHTML=error
+            }
+        }
+    </script>
+</body>
+</html>

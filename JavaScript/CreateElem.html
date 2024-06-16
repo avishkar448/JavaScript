@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{ 
+        width: 100%;
+        height: 100%;
+    }
+
+    .container{ 
+        height: 500px;
+        width: 400px;
+        border: 1px solid black;
+
+    }
+
+    .image{ 
+        width: 350px;
+        height: 400px;
+        margin-left: 20px;
+    }
+
+    .image img{
+        width: 100%;
+        height: 450px; 
+        object-fit: cover;
+        object-position: center;
+    }
+</style>
+<body>
+    <div class="main">
+        
+    </div>
+</body>
+<script>
+    var main=document.querySelector(".main")
+
+    function create(){ 
+        let newDiv=document.createElement("div")
+        newDiv.classList.add("container")
+        newDiv.innerHTML=` 
+        <div class="image">
+                <img src="3.png" alt="">
+            </div>
+            <div class="info">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur unde delectus, tempora mollitia ea sunt corporis impedit eaque ipsum ut!</p>
+            </div>
+        `
+        main.appendChild(newDiv)
+    }
+
+    create()
+</script>
+</html>

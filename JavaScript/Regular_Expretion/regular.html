@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- /pattern/modifiers  -->
+    <p id="demo"></p>
+
+    <!-- <script>
+        let text="Welcome to javascript"
+        let pattern=/javascript/i;
+        let result=text.match(pattern);
+
+        document.getElementById("demo").innerHTML=result;
+    </script> -->
+
+    <!-- <script>
+        let str2 = "This company has generated $50 million in FY2023 Q1 while last year it was $222 billion in FY2022 Q3"
+
+        let pattern=/FY\d{4} Q[1-4]/
+        document.write(str2.match(pattern))
+    </script> -->
+
+    <!-- <script>
+        //exec()- to execute regular expression
+        const pattern=/(\d{3})\D(\d{3})-(\d{4})/g;
+        const result=pattern.exec("My phone number is : 555 185-7854")
+        document.write(result)
+    </script> -->
+
+    <!-- <script>
+        function regerps(){ 
+            let str="This is JavaScript Regular expression"
+            let regex=new RegExp("regular")
+            let result=regex.test(str)
+            document.write(result)
+        }
+
+        regerps()
+    </script> -->
+
+    <!-- <script>
+        function reg(){ 
+            let str="This is regular Expression"
+            let reg=/regular/;
+
+            let result=str.match(reg);
+            document.write(result);
+        }
+        reg();
+    </script> -->
+
+    <!-- <script>
+        //search- return indexing
+        const string="Find me"
+        const pattern=/me/
+        const result=string.search(pattern)
+        document.write(result)
+    </script> -->
+
+    <script>
+        //Replace
+        const string="Hello World"
+        const pattern=/World/;
+        const replacestring=string.replace(pattern,"JavaScript")
+        document.write(replacestring)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .x{
+        background-color: black;
+        color: white;
+        width: 180px;
+        height: 30px;
+    }
+</style>
+<body>
+    <!-- getElementByTagName -->
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <button onclick="countx()">count</button>
+
+    <script>
+        const countx = () => {
+            var x = document.getElementsByTagName("p");
+            document.write("Total tags length: " + x.length)
+        }
+    </script>
+    <br>
+    <br>
+
+    <!-- documentgetElementByClassName -->
+    <button onclick="orange()" class="black red x">orange</button><br>
+    <button onclick="white()" class="black white x">white</button><br>
+    <button onclick="green()" class="black green x">green</button><br><br>
+    <button onclick="black()">reset</button><br>
+
+    <script>
+        const orange = () => {
+            document.getElementsByClassName('red')[0].style.backgroundColor = 'orange'
+        }
+
+        const white=()=>{ 
+            document.getElementsByClassName('white')[0].style.backgroundColor='white'
+        }
+        const green=()=>{ 
+            document.getElementsByClassName('green')[0].style.backgroundColor='green'
+        }
+        const black=()=>{ 
+          var a=document.getElementsByClassName('black');
+          for(i=0;i<a.length;i++){ 
+            a[i].style.backgroundColor='black'
+          }
+        }
+    </script>
+</body>
+
+</html>

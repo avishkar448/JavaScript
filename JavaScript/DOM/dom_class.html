@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- getElementByTagName -->
+
+    <!-- <p>Ihis is my Tag</p>
+    <p>Avishkar</p>
+    <p>I am Iron man</p>
+    <p>Hello</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <button onclick="countpara()">count paragraph</button>
+
+    <script>
+        function countpara(){ 
+            var t=document.getElementsByTagName("p");
+            alert("total p tags are: "+t.length)
+        }
+</script> -->
+
+    <!-- getElementByName -->
+
+    <!-- <form action="" name="form1">
+        Enter name:
+        <input type="text" name="" id="nm">
+
+        <input type="button" name="" onclick="printvalue()" value="print name">
+
+    </form>
+
+    <script>
+        function printvalue(){ 
+            var name=document.form1.nm.value;
+            alert("welcome "+name)
+        }
+    </script> -->
+
+    <h2>Hello</h2>
+
+    <div class>
+        <button onclick="red()" class="black red">click to change red</button>
+        <br>
+        <button onclick="blue()" class="black blue">click to change blue</button>
+        <br>
+        <button onclick="black()" class="">click to change all button initial status</button>
+        <br>
+    </div>
+
+    <script>
+        function red(){ 
+            document.getElementsByClassName('red')
+            [0].style.backgroundColor='red';
+        }
+
+        function blue(){ 
+            document.getElementsByClassName('blue')
+            [0].style.backgroundColor='blue';
+        }
+
+        function black(){ 
+            var element=documnet.getElementsByClassName('black');
+            for(var i=0;i<element.length;i++){
+                element[i].style.backgroundColor='black';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

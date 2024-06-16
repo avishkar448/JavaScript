@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>This is Ajax file</h2>
+
+    <div id="demo">
+        <p>Change this text</p>
+
+        <button type="button" onclick="msg()">change the content</button>
+
+    </div>
+
+    <script>
+        function msg() {
+            const x1 = new XMLHttpRequest;
+            x1.onload = function () {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+            x1.open("GET", "Hello.txt", true);
+            x1.send()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main" id="x">
+        <h1>Avishkar</h1>
+        <h1>Ashok</h1>
+        <h1>Gawali</h1>
+    </div>
+    <br>
+    <div class="main">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus ad nostrum omnis. Veniam expedita tempora
+            fugit nobis maxime officia laborum, quia nesciunt in eligendi.</p>
+    </div>
+
+    <p class="main">We are future</p>
+
+    <span class="main">Greate</span>
+</body>
+<script>
+    let x = document.getElementsByClassName('main')
+
+    x[2].style.backgroundColor = "red"
+    x[0].style.backgroundColor = "orange"
+
+    q=document.getElementById("x")
+    let w=q.getAttribute("class")
+    console.log(w)
+</script>
+
+</html>

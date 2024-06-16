@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #lengthCalculator {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <title>Thala</title>
+</head>
+<body>
+  <div id="lengthCalculator">
+    <label for="inputString">Enter a input</label>
+    <input type="text" id="inputString" placeholder="Type a string...">
+    <button onclick="calculateLength()">Check</button>
+    <div id="result"></div>
+    
+  </div>
+
+  <script>
+    function calculateLength() {
+      var inputString = document.getElementById('inputString').value;
+      var length = inputString.length;
+      var resultElement = document.getElementById('result');
+      
+
+      if(length==7){ 
+        resultElement.textContent = 'Thala for a reason!!! ' + length;
+      }
+      else if(inputString=="Thala" || inputString=="thala"){ 
+        resultElement.textContent = 'Bole jo koyal bago mein!!! ';
+      }
+      else{ 
+        resultElement.textContent = 'No Thala: ' + length;
+      } 
+    }
+  </script>
+</body>
+</html>

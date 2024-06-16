@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 400px;
+        width: 400px;
+        border: 1px solid black;
+    }
+
+    .colors {
+        background-color: rgb(192, 36, 36);
+    }
+
+    .colors1 {
+        background-color: rgb(230, 154, 14);
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <p>jhgsgasgdgasjdgjhgshs</p>
+    </div>
+</body>
+
+<script>
+    let x = document.querySelector(".container")
+    console.log(x.classList.values)
+    x.addEventListener('click', () => {
+
+        if (x.classList.contains('colors')) {
+            x.classList.replace('colors1')
+        }
+        else {
+            x.classList.add('colors')
+        }
+    })
+
+
+</script>
+
+</html>

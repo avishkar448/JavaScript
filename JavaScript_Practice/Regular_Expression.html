@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- /pattern/modifiers -->
+
+    <p id="demo"></p>
+    <script>
+        let t = "My name is Avishkar"
+        let pattern = /avishkar/i;
+        let result = t.match(pattern)
+        document.getElementById("demo").innerHTML = result;
+
+    </script>
+    <br>
+    <!-- <script>
+        let str="This company has generated $50 million in FY2023 Q1 while lastyear it was $222 billion in FY2022 Q3"
+       // let p=/last\w/
+       let p=/FY\d{4} Q[1-4]/
+        document.write(str.match(p))
+    </script> -->
+
+    <script>
+        function reg() {
+            let x = "I am a web devloper"
+            let c = new RegExp("web2")
+            let re = c.test(x)
+            document.write(re)
+        }
+        reg()
+    </script>
+    <br>
+    <script>
+        let z = "Love you 3000"
+        let a = /YOU/i
+        let result1 = z.match(a)
+        document.write(result1)
+    </script>
+    <br>
+
+    <script>
+        const string = "Find me"
+        const pat = /me/
+        const res = string.search(pat)
+        document.write(res)
+    </script>
+
+    <br>
+
+    <script>
+        let pa = /(\d{3})\D(\d{5})\s([A-Z])\w+/
+        let xa = pa.exec("451 78451 Avishkar")
+        document.write(xa)
+    </script>
+    <br>
+    <script>
+        const string1 = "I am the GOAST OF THE UCHIHA"
+        let p12 = /uchiha/i;
+        let rew = string1.search(p12)
+        document.write(rew)
+    </script>
+
+<br>
+    <script>
+        const pain="Feel the xa accept the xa known the xa those who do not understand true xa can never understand the true peace"
+        const s=/xa/;
+        let replaceword=pain.replace(s,"PAIN")
+        document.write(replaceword)
+    </script>
+
+<br>
+    <script>
+        const n=/^[7][0-9]{9}$/
+        let z1=8954210254;
+        let r=n.test(z1)
+        console.log(r)
+    </script>
+</body>
+
+</html>

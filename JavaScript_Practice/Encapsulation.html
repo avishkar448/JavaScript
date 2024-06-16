@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Test{ 
+            constructor(name){ 
+                var name;
+            }
+
+            getName(){ 
+                return this.name;
+            }
+            setName(name){ 
+                this.name=name;
+            }
+        }
+
+        var s=new Test()
+        s.setName("Avishakar")
+        document.write(s.getName())
+    </script>
+</body>
+</html>

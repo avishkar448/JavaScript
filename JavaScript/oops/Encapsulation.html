@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class avi{ 
+            constructor(name,acc_no,balence){ 
+                this.name=name;
+                this.acc_no=acc_no;
+                let _balence=balence;
+                
+                this.info=function(){ 
+                    console.log("Account Name: ",this.name);
+                    console.log("Account Name: ",this.acc_no);
+                    console.log("Account Name: ",this._getBalance());
+                }
+
+                this.deposite=function(amt){ 
+                    _balence+=amt;
+                }
+                this.withdraw=function(amt){ 
+                    _balence-=amt;
+                }
+                this.update=function(){ 
+                    console.log("Current balance: ",this._getBalance())
+                }
+                this._getBalance=function(){ 
+                    return _balence;
+                }
+            }
+        }
+
+        const b=new avi("Avishkar",9873654,6000);
+       // b.info()
+      //  b.deposite(1000);
+        // b.update()
+        // b.info();
+        //b.withdraw(5000)
+        b.name="Abhay"
+        b.info()
+      //  b.update()
+    </script>
+</body>
+</html>

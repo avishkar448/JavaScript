@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Class:</h3>
+    <script>
+        class Myclass{ 
+            constructor(name,id){
+                this.name=name;
+                this.id=id;
+
+                console.log("This is a constructor!!")
+            }
+            display(){ 
+                document.write("Name: ",this.name)
+                document.write("<br>")
+                document.write("Id: ",this.id)
+                
+            }
+        }
+
+        const x=new Myclass("Avishkar",2343);
+        x.display()
+    </script>
+
+    <h3>Inheritance:</h3>
+    <script>
+        class A{
+            constructor(name,id){
+                this.name=name;
+                this.id=id;                
+            }
+            displa(){ 
+                document.write("Name: ",this.name)
+                document.write("<br>")
+                document.write("Id: ",this.id)
+                
+            }
+        }
+
+        class B extends A{
+            constructor(name,id,phone){
+                super(name,id)
+                this.phone=phone
+            }
+            display(){
+                document.write(this.displa()) 
+                document.write("<br>")
+                document.write("Phone number: ",this.phone)
+            }
+        }
+
+        let q=new B("Avishkar",12,9730328530)
+        q.display()
+    </script>
+
+    <h3>Abstraction: </h3>
+    <script>
+        class Course{ 
+            price(){
+                document.write("The course")
+            }
+        }
+        class Frontend extends Course{
+            price(){
+                document.write("Price of this course is 20k");
+            }
+        }
+        class fullstack extends Course{
+            price(){
+                document.write("price of this course is 50k")
+            }
+        }
+
+        let f=new Frontend();
+        f.price()
+    </script>
+
+    <h3>Encapsulation: </h3>
+    <script>
+        class avi{ 
+            constructor(name,acc_no,balence){
+                this.name=name;
+                this.acc_no=acc_no;
+                this.balence=balence;
+            }
+            show(){
+            document.write("Account Name: ",this.name);
+                document.write("  Account Number: ",this.acc_no);
+                document.write("  Account Balence: ",this.balence);
+            }
+
+            deposite(amt){ 
+                this.balence+=amt;
+                this.show()
+            }
+
+            withdraw(amt){ 
+                if(this.balence>=amt){
+                    this.balence-=amt;
+                    this.show()
+                }
+                else{
+                    document.write("No sufficient balence!!")
+                }
+            }
+        }
+
+        let a=new avi("Avishkar",1001,5000)
+     //   a.show()
+        a.deposite(1000)
+        document.write("<br>")
+        a.withdraw(7000)
+       // a.show()
+    </script>
+
+    <h3>Polymorphism</h3>
+    <script>
+         class Cat {
+            constructor(name) {
+                this.name = name
+            }
+            display() {
+                document.write("My Cat Name: ", this.name)
+            }
+        }
+
+        const b = new Cat("Billa")
+        class Dog {
+            constructor(name) {
+                this.name = name
+            }
+
+            display() {
+                document.write("<br>")
+
+                document.write("My Dog Name : ", this.name)
+            }
+        }
+
+        const c = new Dog("Jonny")
+
+        function info(a) {  
+            a.display()
+        }
+
+        info(b)
+        info(c)
+    </script>
+
+    <h3>Overriding</h3>
+    <script>
+        class area{
+            a(){
+                document.write("Area of rectangle: ")
+            }
+        }
+        class Rectangle extends area{
+            a(l,b){
+                super.a();
+                document.write(l,b)
+            }
+        }
+        let z=new Rectangle();
+        z.a(10,20)
+    </script>
+</body>
+</html>

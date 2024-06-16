@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <h2>Let Ajax change this content</h2>
+        <button type="button" onclick="msg()">change content</button>
+    </div>
+
+    <script>
+        function msg(){
+            var a=new XMLHttpRequest();
+            a.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("demo").innerHTML=this.responseText;
+                }
+            }
+            a.open("GET","hello.txt",true)
+            a.send()
+        }
+    </script>
+</body>
+</html>

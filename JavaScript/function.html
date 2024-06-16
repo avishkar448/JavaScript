@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+//Function
+    //syntax 
+    //function functionname(){ //code }
+
+    // function msg(){ 
+    //     document.write("Hello World")
+    // }
+
+    // msg()
+
+    // function avi(){ 
+    //     data="HTML"
+    //     let msg=data;
+    //     alert(msg)
+    // }
+    // avi()
+
+    // function add(a,b){
+    //     let sum=a+b;
+    //     alert(sum)
+    // }
+    // add(2,3)
+
+    // function sub(a=9,b=8){
+    //     let m=a-b
+    //     alert(m)
+    // }
+    // sub()
+
+//     function mul(a,b){ 
+//         let x=a*b;
+//         return x
+//     }
+//    let result= mul(2,2) 
+//    alert(result)
+
+    function addition(...args){
+       let addition=0 
+       for(let arg of args) 
+        addition +=arg;
+       
+       //document.write(addition)
+       return addition
+
+    }
+
+   let x= addition(23,43,43,56,43,23)
+   document.write(x)
+    </script>
+</body>
+</html>

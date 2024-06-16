@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    number1:
+    <input type="text" id="n1"> <br>
+    number2:
+    <input type="text" id="n2"><br>
+    <button id="divide">Divide</button><br>
+    <h4 id="result"></h4>
+</body>
+<script>
+    var n1=document.querySelector("#n1").value
+    var n2=document.querySelector("#n2").value
+
+    var x=Number(n1)
+    var y= Number(n2)
+    var btn=document.querySelector("#divide")
+    var result=document.querySelector("#result")
+    
+    btn.addEventListener("click",()=>{
+        try{
+            if(y==0){ 
+                throw("We cannot divide!")
+            }
+            else{
+                let div=x/y
+                console.log(div)
+                result.innerHTML="The answer is : "+div;
+            }
+        }
+        catch(error){
+            result.innerHTML=error;
+        }
+    })
+</script>
+</html>

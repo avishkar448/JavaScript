@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="demo"></h4>
+    <hr>
+    <h4 id="demo1"></h4>
+    <script>
+        function display(x){ 
+            document.getElementById("demo").innerHTML=x;
+        }
+
+        function mul(y){ 
+            let z=[1,2,3,4,5,6,7,8,9,100]
+            let sum=0;
+            for(let i=0;i<z.length;i++){ 
+                sum+=z[i];
+                
+            }
+            y(sum);
+        }
+
+        mul(display)
+    </script>
+
+    <script>
+        let displa=(x)=>{ 
+            document.getElementById("demo1").innerHTML=x;
+        }
+
+        let mu=(a)=>{ 
+            let x=[1,2,3,4,5,6,7,8,9,0]
+            let m=0
+            for(let i=0;i<x.length;i++){ 
+                 m +=x[i];
+            }
+            a(m);
+        }
+
+        mu(displa)
+    </script>
+
+<p id="a"></p>
+    <script>
+        let z=new Promise((resolve,reject)=>{
+            let f=Math.random();
+
+            if(f<0.5){
+                resolve("You are win the match!")
+            }
+            else{ 
+                // setTimeout(()=>{ 
+                //     reject("You are loss the match!")
+                // },3000);
+                reject("You are loss the match!")
+            }
+
+        })
+
+        z.then((z)=>{
+            document.getElementById("a").innerHTML=z;
+        }).catch((err)=>{
+            document.getElementById("a").innerHTML=err;
+        })
+    </script>
+
+    <h3 id="q"></h3>
+    <script>
+        function display1(a){ 
+            document.getElementById("q").innerHTML=a
+        }
+
+        function xxx(x,y){ 
+            let z=x+y
+            display1(z)
+        }
+
+        xxx(10,20)
+    </script>
+</body>
+</html>

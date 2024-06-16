@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function myfunc(some){ 
+            document.getElementById("demo").innerHTML=some;
+        }
+
+    let m=new Promise(function(myres,myrej){
+        let x=1;
+        if(x==0){ 
+            myres("ok")
+        }
+        else{ 
+            myrej("error")
+        }
+    })
+
+    m.then(
+        function(value){myfunc(value);},
+        function(error){myfunc(error);}
+    )
+    </script>
+
+    <h1 id="a"></h1>
+    <script>
+        function display(x){ 
+            document.getElementById("a").innerHTML=x;
+        }
+
+        let q=new Promise((re,rj)=>{
+           let z= prompt("Enter the number")
+
+           if(z==1||z==2){
+            re("You Win");
+           }
+           else{ 
+            rj("You loss")
+           }
+        })
+
+        q.then(
+            function(value){display(value)},
+            function(error){display(error)}
+        )
+    </script>
+</body>
+</html>

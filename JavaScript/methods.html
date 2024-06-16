@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let a={ 
+            fnm:"Avishkar",
+            lnm:"Gawali",
+            marks:98,
+            rank: 2,
+            msg:function(){ 
+            return this.fnm+" "+this.lnm;
+        }
+        };
+       document.write(a.msg())
+        
+    </script> -->
+    <h2 id="a"></h2>
+    <script>
+       
+       const p={
+            fullnm:function(){ 
+                return this.fnm+" "+this.lnm+" "+
+                city +" "+ country
+            }
+       };
+
+       let p1={ 
+        fnm:"Avishkar",
+        lnm:"Gawali"
+       }
+
+    //   document.getElementById("a").innerHTML=p.fullnm.call(p1)
+       document.getElementById("a").innerHTML=p.fullnm.apply(p1,["Ahmednagar","India"])
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const getData=async()=>{ 
+        //     let data ="Hello World!"
+        //     return data;
+        // }
+
+        // getData().then((data)=>console.log(data))
+
+    </script>
+    <h1 id="a"></h1>
+
+    <script>
+        async function avi(){ 
+            let x=new Promise(function(resolve){ 
+                resolve("Hello my name is Avishkar")
+            })
+            document.getElementById("a").innerHTML=await x;
+        }
+
+        avi()
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <!-- <script>
+        //try...catch
+        //try...catch...finally
+
+        try{
+            // let a=10
+            // let b=0
+            // let c=a/b
+            // document.write(c)
+            //alert("welcome")
+        }
+        catch(err){
+            document.getElementById("demo").innerHTML=err.message
+        }
+    </script> -->
+
+    <!-- <script>
+        function myfunction(){
+            var a=100;
+            var b=7;
+
+            try{
+                if(b==0){ 
+                    throw("Divide by zero error")
+                }
+                else{
+                    c=a/b;
+                    alert(c)
+                }
+            }
+            catch(err){ 
+                // document.getElementById("demo").innerHTML=err.message;
+                document.write("Alert "+err)
+            }
+        }
+
+        myfunction()
+    </script> -->
+
+    <script>
+
+        try{
+            let a=8
+            if(a==2){ 
+                document.write("OK"+"<br>")
+            }
+        }
+        catch(err){ 
+            document.write("Error found "+err.message)
+        }
+        finally{ 
+            document.write("value of a is 2")
+        }
+    </script>
+</body>
+
+</html>

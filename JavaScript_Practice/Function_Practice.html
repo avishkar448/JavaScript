@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    //for in loop
+    <p id="a"></p>
+    <script>
+        const person = [2, 4, 5, 7, 12, 45, 89]
+        let txt = ""
+        for (let x in person) {
+            txt += person[x] + " ";
+            document.getElementById("a").innerHTML = txt;
+        } 
+    </script>
+    <br>
+    //for of loop
+    <p id="b"></p>
+    <script>
+        let z = [34, 54, 23, 654, 54, 32, 11]
+        for (const a of z) {
+            document.write(a * 2 + " ")
+        }
+        document.write("<br>")
+
+        let number = [11, 22, 33, 44, 55, 66]
+        for (const num of number) {
+            document.write(num * 2 + " ")
+        }
+        document.write("<br>")
+
+    </script>
+
+    <br>
+    //Multiple argument
+
+    //capcut
+    <br>
+    <script>
+        function avi(...args){
+            let sum=0;
+            for(let x of args){ 
+                sum+=x;
+            }
+            document.write(sum)
+        }
+        avi(21,33,43,56,4,32)
+    </script>
+
+    //Arrow function
+    <br>
+    <script>
+        let msg=()=>{ 
+            document.write("Hello World!")
+        }
+        msg()
+    </script>
+
+    //Call back 
+    <br>
+    <h3 id="w"></h3>
+    <script>
+        function myavi(x){ 
+            document.getElementById("w").innerHTML=x
+        }
+        function xx(a,b,add){
+        let sum=a+b;
+        add(sum)    
+        }
+        xx(20,30,myavi)
+        
+    </script>
+
+    <br>
+    //Anonymous function
+    <br>
+    <script>
+        const mul=function(a,b){ 
+            let Multi=a*b
+            document.write("Multiplication: "+Multi)
+        }
+        mul(10,10)
+    </script>
+
+    <br>
+
+    <h2 id="o"></h2>
+    <script>
+        function display(prt){ 
+            document.getElementById("o").innerHTML=prt;
+        }
+
+        function ax(a,xyz){ 
+            let result="Hello my name is "+a;
+            xyz(result);
+        }
+
+        ax("Avishkar",display)
+    </script>
+</body>
+
+</html>

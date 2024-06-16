@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3 id="demo"></h3>
+    <script>
+        const a={ 
+            Name:"Avishkar",
+            Edu:"MSC CS",
+            Job:"Web devloper",
+
+            xx:function(){ 
+                return this.Name+" "+this.Edu
+            }
+        }
+
+        const mm={ 
+            Name:"Ravi",
+            Edu:"BCS"
+        }
+        let xy=a.xx.bind(a);
+        document.getElementById("demo").innerHTML=xy()
+    </script>
+
+</body>
+</html>
