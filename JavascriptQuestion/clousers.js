@@ -5,7 +5,7 @@ function outerScope() {
     let x = "Deadpool two ";
     console.log("inner ", name);
   }
-  console.log()
+  console.log();
   function innerTwo() {
     // console.log(x); //  cannot access the value of another function
     console.log(name); // access from outer function
@@ -29,25 +29,40 @@ myFun();
 
 //example of clouser
 function createCounter() {
-    let count = 0;
+  let count = 0;
 
-    return {
-        increment: function() {
-            count++;
-            return count;
-        },
-        decrement: function() {
-            count--;
-            return count;
-        },
-        getCount: function() {
-            return count;
-        }
-    };
+  return {
+    increment: function () {
+      count++;
+      return count;
+    },
+    decrement: function () {
+      count--;
+      return count;
+    },
+    getCount: function () {
+      return count;
+    },
+  };
 }
 
 const counter = createCounter();
 console.log(counter.increment()); // 1
 console.log(counter.increment()); // 2
 console.log(counter.decrement()); // 1
-console.log(counter.getCount());  // 1
+console.log(counter.getCount()); // 1
+
+/// example
+function f(x) {
+  x = "x-" + x;
+  return function (y) {
+    y = "y-" + x;
+    return function (z) {
+      return "z-" + y;
+    };
+  };
+}
+
+let g = f("a")("b")("c");
+console.log(g);
+
