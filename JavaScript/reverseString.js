@@ -12,3 +12,14 @@ function reverseString(str) {
 
 const r = reverseString(x);
 console.log("Reverse :", r);
+
+
+const y="Hello World!";
+const res=y.split("").reverse().join("");
+console.log(res)
+
+let rev=""
+for(let i=y.length-1;i>=0;i--){ 
+    rev+=y[i];
+}
+console.log(rev)
